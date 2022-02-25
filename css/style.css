@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+:root {
+    --my-padding: 0.4rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    color: #000;
+    display: grid;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: x-large;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 2fr 1fr 1fr 0.75fr;
+    grid-template-areas:
+    "header menu menu menu"
+    "hero hero hero hero"
+    "main main image image"
+    "main main extra extra"
+    "banner banner banner banner"
+    ;
+    height: 100vh;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+header {
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    display: grid;
+    grid-area: header;
+    padding: var(--my-padding);
+}
+
+menu {
+    align-items: center;
+    background-color: red;
+    color: white;
+    display: grid;
+    grid-area: menu;
+}
+
+.hero {
+    align-items: center;
+    background-color: rgb(131, 208, 243);
+    color: white;
+    display: grid; 
+    grid-area: hero;
+}
+
+.main {
+    align-items: center;
+    background-color: rgb(184, 45, 45);
+    color: white;
+    display: grid; 
+    grid-area: main;
+}
+
+.image {
+    align-items: center;
+    background-color: rgb(201, 211, 216);
+    color: white;
+    display: grid; 
+    grid-area: image;
+}
+
+.extra {
+    align-items: center;
+    background-color: rgb(59, 196, 116);
+    color: white;
+    display: grid; 
+    grid-area: extra;
+}
+
+footer {
+    align-items: center;
+    background-color: rgb(255, 159, 68);
+    color: white;
+    display: grid; 
+    grid-area: banner;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        color: #000;
+        display: grid;
+        font-family: 'Luckiest Guy', cursive;
+        font-size: x-large;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 0.5fr 1.5fr 2fr 1fr 0.75fr;
+        grid-template-areas:
+        "header header header header"
+        "hero hero hero hero"
+        "menu main main main"
+        "menu banner banner banner"
+        "menu extra extra image"
+        ;
+        height: 100vh;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        color: #000;
+        display: grid;
+        font-family: 'Luckiest Guy', cursive;
+        font-size: x-large;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.7fr 1.5fr 2fr 1fr 1fr 1.2fr;
+        grid-template-areas:
+        "header"
+        "menu"
+        "hero"
+        "main"
+        "banner"
+        "extra"
+        "image"
+        ;
+        height: 100vh;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
